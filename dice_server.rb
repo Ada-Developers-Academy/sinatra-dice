@@ -6,10 +6,10 @@ get '/' do
 end
 
 get '/diceroll' do
-  roll_dice
+  erb :dice_form
 end
 
-get '/diceroll/:number_of_dice' do
+post '/diceroll' do
   roll_dice(params[:number_of_dice].to_i)
 end
 
